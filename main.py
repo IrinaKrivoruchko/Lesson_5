@@ -14,6 +14,7 @@ for num in range(NUM_SIZE):
 print(numbers)
 sum_negative = 0
 sum_even = 0
+sum_odd = 0
 
 #1
 for num in numbers:
@@ -32,4 +33,13 @@ for num in numbers:
         continue
 
 print(f"Sum of even numbers: {sum_even}")
+
+#3
+for num in numbers:
+    if num % 2 != 0:
+        sum_odd += num
+    else:
+        continue
+
+print(f"Sum of odd numbers: {sum_odd}")
 

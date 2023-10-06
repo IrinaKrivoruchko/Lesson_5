@@ -13,6 +13,7 @@ for num in range(NUM_SIZE):
 
 print(numbers)
 sum_negative = 0
+sum_even = 0
 
 #1
 for num in numbers:
@@ -22,4 +23,13 @@ for num in numbers:
         continue
 
 print(f"Sum of negative numbers: {sum_negative}")
+
+#2
+for num in numbers:
+    if num % 2 == 0:
+        sum_even += num
+    else:
+        continue
+
+print(f"Sum of even numbers: {sum_even}")
 

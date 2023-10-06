@@ -15,6 +15,7 @@ print(numbers)
 sum_negative = 0
 sum_even = 0
 sum_odd = 0
+multiple = 1
 
 #1
 for num in numbers:
@@ -43,3 +44,11 @@ for num in numbers:
 
 print(f"Sum of odd numbers: {sum_odd}")
 
+#4
+for i in range(len(numbers)):
+    if i % 3 == 0:
+        multiple *= numbers[i]
+    else:
+        continue
+
+print(f"Product of elements with multiple indices of 3: {multiple}")

@@ -125,14 +125,27 @@ print(numbers)
 #     print("All numbers are even")
 
 #3
-only_negative = []
+# only_negative = []
+# for num in numbers:
+#     if num < 0:
+#         only_negative.append(num)
+#     else:
+#         continue
+#
+# if len(only_negative) != 0:
+#     print(f"Create a list of integers containing only negative numbers: {only_negative}")
+# else:
+#     print("All numbers are positive")
+
+#4
+only_positive = []
 for num in numbers:
-    if num < 0:
-        only_negative.append(num)
+    if num >= 0:
+        only_positive.append(num)
     else:
         continue
 
-if len(only_negative) != 0:
-    print(f"Create a list of integers containing only negative numbers: {only_negative}")
+if len(only_positive) != 0:
+    print(f"Create a list of integers containing only positive numbers: {only_positive}")
 else:
-    print("All numbers are positive")
+    print("All numbers are negative")

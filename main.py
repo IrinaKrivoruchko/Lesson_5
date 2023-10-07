@@ -6,19 +6,15 @@ while True:
     except:
         print("Enter only integer numbers please!")
 
-
 numbers = []
 for num in range(NUM_SIZE):
     numbers.append(random.randint(-100, 100))
 
 print(numbers)
-sum_negative = 0
-sum_even = 0
-sum_odd = 0
-multiple = 1
-multiple_beetween_min_to_max = 1
 
+#First task
 #1
+sum_negative = 0
 for num in numbers:
     if num < 0:
         sum_negative += num
@@ -28,6 +24,7 @@ for num in numbers:
 print(f"Sum of negative numbers: {sum_negative}")
 
 #2
+sum_even = 0
 for num in numbers:
     if num % 2 == 0:
         sum_even += num
@@ -37,6 +34,7 @@ for num in numbers:
 print(f"Sum of even numbers: {sum_even}")
 
 #3
+sum_odd = 0
 for num in numbers:
     if num % 2 != 0:
         sum_odd += num
@@ -46,6 +44,7 @@ for num in numbers:
 print(f"Sum of odd numbers: {sum_odd}")
 
 #4
+multiple = 1
 for i in range(len(numbers)):
     if i % 3 == 0:
         multiple *= numbers[i]
@@ -55,18 +54,42 @@ for i in range(len(numbers)):
 print(f"Product of elements with multiple indices of 3: {multiple}")
 
 #5
-min_value = min(numbers)
-max_value = max(numbers)
-
-index_min_value = numbers.index(min_value)
-index_max_value = numbers.index(max_value)
+index_min_value = numbers.index(min(numbers))
+index_max_value = numbers.index(max(numbers))
 
 if index_min_value < index_max_value:
     new_numbers = numbers[index_min_value+1:index_max_value]
 else:
     new_numbers = numbers[index_max_value+1:index_min_value]
 
-for num in new_numbers:
-    multiple_beetween_min_to_max *= num
+multiple_beetween_min_to_max = 1
+if len(new_numbers) != 0:
+    for num in new_numbers:
+        multiple_beetween_min_to_max *= num
+    print(f"Multiplication result of elements between the minimum and maximum element: {multiple_beetween_min_to_max}")
+else:
+    print("The minimum and maximum values are next to each other")
 
-print(f"Multiplication result of elements between the minimum and maximum element: {multiple_beetween_min_to_max}")
+#6
+index_first_positive_el = 0
+index_last_positive_el = 0
+
+for num in numbers:
+    if num > 0:
+        index_first_positive_el = numbers.index(num)
+        break
+
+for num in numbers:
+    if num > 0:
+        index_last_positive_el = numbers.index(num)
+    else:
+        continue
+
+sum_slice = 0
+new_num = numbers[index_first_positive_el + 1: index_last_positive_el]
+if len(new_num) != 0:
+    for i in new_num:
+        sum_slice += i
+    print(f"The sum of elements that are between the first and remaining positive elements: {sum_slice}")
+else:
+    print("The minimum and maximum values are next to each other")

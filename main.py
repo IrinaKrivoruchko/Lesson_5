@@ -101,13 +101,25 @@ print(numbers)
 
 #Second task
 #1
-only_even = []
+# only_even = []
+# for num in numbers:
+#     if num % 2 == 0:
+#         only_even.append(num)
+#     else:
+#         continue
+# if len(only_even) != 0:
+#     print(f"New list of integers containing only even numbers: {only_even}")
+# else:
+#     print("All numbers are odd")
+
+#2
+only_odd = []
 for num in numbers:
-    if num % 2 == 0:
-        only_even.append(num)
+    if num % 2 != 0:
+        only_odd.append(num)
     else:
         continue
-if len(only_even) != 0:
-    print(f"New list of integers containing only even numbers: {only_even}")
+if len(only_odd) != 0:
+    print(f"Create a list of integers containing only odd numbers: {only_odd}")
 else:
-    print("All numbers are odd")
+    print("All numbers are even")

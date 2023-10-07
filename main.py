@@ -113,13 +113,26 @@ print(numbers)
 #     print("All numbers are odd")
 
 #2
-only_odd = []
+# only_odd = []
+# for num in numbers:
+#     if num % 2 != 0:
+#         only_odd.append(num)
+#     else:
+#         continue
+# if len(only_odd) != 0:
+#     print(f"Create a list of integers containing only odd numbers: {only_odd}")
+# else:
+#     print("All numbers are even")
+
+#3
+only_negative = []
 for num in numbers:
-    if num % 2 != 0:
-        only_odd.append(num)
+    if num < 0:
+        only_negative.append(num)
     else:
         continue
-if len(only_odd) != 0:
-    print(f"Create a list of integers containing only odd numbers: {only_odd}")
+
+if len(only_negative) != 0:
+    print(f"Create a list of integers containing only negative numbers: {only_negative}")
 else:
-    print("All numbers are even")
+    print("All numbers are positive")
